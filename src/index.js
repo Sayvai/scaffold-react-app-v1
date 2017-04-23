@@ -1,5 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App.jsx';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { createStore, applyMiddleware } from 'redux'
+import thunkMiddleware from 'redux-thunk'
+import { Provider } from 'react-redux'
+import reducers from './reducers'
+import App from './components/App.jsx'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+let store = createStore(
+    reducers,
+    applyMiddleware(
+        thunkMiddleware // lets us dispatch() functions
+    )
+)
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+)
