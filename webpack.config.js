@@ -63,5 +63,8 @@ module.exports = {
       }
     ]
   },
-  plugins: [HtmlWebpackPluginConfig]
+  plugins: [HtmlWebpackPluginConfig],
+  devServer: {
+    historyApiFallback: true
+  }
 }
