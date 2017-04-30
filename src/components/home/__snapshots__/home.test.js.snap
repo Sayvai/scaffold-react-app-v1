@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home should render own component snapshot 1`] = `
+<div
+  className="home"
+>
+  <p>
+    Hello world, welcome home!
+  </p>
+</div>
+`;
