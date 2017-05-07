@@ -1,23 +1,30 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styles from './gitUsers.scss'
-import GitUserSearch from './GitUserSearch.jsx'
-import GitUserDetail from './GitUserDetail.jsx'
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './gitUsers.scss';
+import GitUserSearch from './GitUserSearch';
+import GitUserDetail from './GitUserDetail';
 
 const GitUsers = ({ onSubmit, userData }) => {
-  if (!userData) return <GitUserSearch onSubmitCb={onSubmit} />
+  if (!userData) return <GitUserSearch onSubmitCb={onSubmit} />;
 
   return (
     <div className={styles.gitUsers}>
       <GitUserSearch onSubmitCb={onSubmit} />
       <GitUserDetail userData={userData} />
     </div>
-  )
-}
+  );
+};
 
 GitUsers.propTypes = {
   onSubmit: PropTypes.func.isRequired,
-  userData: PropTypes.object
-}
+  userData: PropTypes.shape({
+    avatar_url: PropTypes.string,
+    login: PropTypes.string,
+  }),
+};
 
-export default GitUsers
+GitUsers.defaultProps = {
+  userData: undefined,
+};
+
+export default GitUsers;

@@ -1,19 +1,27 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styles from './gitUserDetail.scss'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const GitUserDetail = ({ userData }) => {
-  if (!userData) return
+  if (userData) {
+    return (
+      <div>
+        <img src={userData.avatar_url} alt={`Avatar of ${userData.login}`} title={`Avatar of ${userData.login}`} />
+      </div>
+    );
+  }
 
-  return (
-    <div>
-      <img src={userData.avatar_url} alt={`Avatar of ${userData.login}`} title={`Avatar of ${userData.login}`} />
-    </div>
-  )
-}
+  return undefined;
+};
 
 GitUserDetail.propTypes = {
-  userData: PropTypes.object
-}
+  userData: PropTypes.shape({
+    avatar_url: PropTypes.string,
+    login: PropTypes.string,
+  }),
+};
 
-export default GitUserDetail
+GitUserDetail.defaultProps = {
+  userData: undefined,
+};
+
+export default GitUserDetail;

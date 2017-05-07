@@ -1,8 +1,8 @@
-import { combineReducers } from 'redux'
-import githubUser from './githubUser'
+import { combineReducers } from 'redux';
+import githubUser from './githubUser';
 
 const reducers = combineReducers({
-  githubUser
-})
+  githubUser,
+});
 
-export default reducers
+export default reducers;

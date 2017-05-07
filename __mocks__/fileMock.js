@@ -1,1 +1,3 @@
-export default mock = {}
+const mock = {};
+
+export default mock;

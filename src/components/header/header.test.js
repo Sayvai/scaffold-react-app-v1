@@ -1,15 +1,17 @@
-import React from 'react'
-import { shallow } from 'enzyme'
-import Header from './Header.jsx'
+/* eslint-disable */
+
+import React from 'react';
+import { shallow } from 'enzyme';
+import Header from './Header';
 
 describe('Header', () => {
   it('should contain the header class', () => {
     const renderedComponent = shallow(
-      <Header/>
-    )
+      <Header />
+    );
 
-    const result = renderedComponent.hasClass('header')
+    const result = renderedComponent.hasClass('header');
 
-    expect(result).toBe(true)
-  })
-})
+    expect(result).toBe(true);
+  });
+});
