@@ -1,29 +1,31 @@
-import 'whatwg-fetch'
+import 'whatwg-fetch';
 
-export const REQUEST_GITHUB_USER = 'REQUEST_GITHUB_USER'
-export const RECEIVE_GITHUB_USER = 'RECEIVE_GITHUB_USER'
+export const REQUEST_GITHUB_USER = 'REQUEST_GITHUB_USER';
+export const RECEIVE_GITHUB_USER = 'RECEIVE_GITHUB_USER';
 
-const requestGitHubUser = (username) => {
-  return {
+const requestGitHubUser = username => (
+  {
     type: REQUEST_GITHUB_USER,
-    username
+    username,
   }
-}
+);
 
-const receiveGitHubUser = (username, data) => {
-  return {
+const receiveGitHubUser = (username, data) => (
+  {
     type: RECEIVE_GITHUB_USER,
     username,
-    data
+    data,
   }
-}
+);
 
 export function fetchGitHubUser(username) {
   return (dispatch) => {
-    dispatch(requestGitHubUser(username))
+    dispatch(requestGitHubUser(username));
 
+    // disable lint on fetch() since whatwg-fetch is a polyfill
+    // eslint-disable-next-line no-undef
     return fetch(`https://api.github.com/users/${username}`)
       .then(response => response.json()
-      .then(json => dispatch(receiveGitHubUser(username, json))))
-  }
+      .then(json => dispatch(receiveGitHubUser(username, json))));
+  };
 }

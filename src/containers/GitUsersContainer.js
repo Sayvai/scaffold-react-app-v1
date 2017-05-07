@@ -1,26 +1,25 @@
-import { connect } from 'react-redux'
-import { fetchGitHubUser } from '../actions'
-import GitUsers from '../components/gitUsers/gitUsers.jsx'
+import { connect } from 'react-redux';
+import { fetchGitHubUser } from '../actions';
+import GitUsers from '../components/gitUsers/GitUsers';
 
-const mapStateToProps = (state) => {
-
-  return {
-    userData: state.githubUser.githubData
+const mapStateToProps = state => (
+  {
+    userData: state.githubUser.githubData,
   }
-}
+);
 
-const mapDispatchToProps = (dispatch) => {
-  return {
+const mapDispatchToProps = dispatch => (
+  {
     onSubmit: (evt) => {
       evt.preventDefault();
-      dispatch(fetchGitHubUser(evt.target.querySelector('input[name=username]').value))
-    }
+      dispatch(fetchGitHubUser(evt.target.querySelector('input[name=username]').value));
+    },
   }
-}
+);
 
 const GitUsersContainer = connect(
   mapStateToProps,
-  mapDispatchToProps
-)(GitUsers)
+  mapDispatchToProps,
+)(GitUsers);
 
-export default GitUsersContainer
+export default GitUsersContainer;

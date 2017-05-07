@@ -1,21 +1,15 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styles from './gitUserSearch.scss'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const GitUserSearch = ({ onSubmitCb }) => {
-  return (
-    <form onSubmit={onSubmitCb}>
-      <input 
-        type="text" 
-        name="username"
-        placeholder="Enter a GitHub username" />
-      <button type="submit">Search User</button>
-    </form>
-  )
-}
+const GitUserSearch = ({ onSubmitCb }) => (
+  <form onSubmit={onSubmitCb}>
+    <input type="text" name="username" placeholder="Enter a GitHub username" />
+    <button type="submit">Search User</button>
+  </form>
+);
 
 GitUserSearch.propTypes = {
-  onSubmitCb: PropTypes.func.isRequired
-}
+  onSubmitCb: PropTypes.func.isRequired,
+};
 
-export default GitUserSearch
+export default GitUserSearch;

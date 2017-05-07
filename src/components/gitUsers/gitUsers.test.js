@@ -1,28 +1,31 @@
-import React from 'react'
-import { shallow } from 'enzyme'
+/* eslint-disable */
 
-import GitUsers from './GitUsers.jsx'
+import React from 'react';
+import { shallow } from 'enzyme';
+
+import GitUsers from './GitUsers';
 
 describe('GitUsers', () => {
-	const userData = {
+  const userData = {
     login: 'Sayvai',
-    avatar_url: 'https://avatars0.githubusercontent.com/u/7581546?v=3'
-  }
-	const onSubmit = jasmine.createSpy('onSubmit')
-	let Component
+    avatar_url: 'https://avatars0.githubusercontent.com/u/7581546?v=3',
+  };
 
-	beforeEach(() => {
-		Component = shallow(
-			<GitUsers
-				onSubmit={onSubmit}
-				userData={userData}
-			/>
-		)
-	})
+  const onSubmit = jasmine.createSpy('onSubmit');
+  let Component;
 
-	it('should render own component', () => {
-		expect(Component.length).toBeTruthy();
+  beforeEach(() => {
+    Component = shallow(
+      <GitUsers
+        onSubmit={onSubmit}
+        userData={userData}
+      />,
+    );
+  });
 
-		expect(Component.find('GitUserSearch').length).toBeTruthy;
-	})
-})
+  it('should render own component', () => {
+    expect(Component.length).toBeTruthy();
+
+    expect(Component.find('GitUserSearch').length).toBeTruthy;
+  });
+});
