@@ -5,7 +5,125 @@ exports[`Home should render own component snapshot 1`] = `
   className="home"
 >
   <p>
-    Hello world, welcome home!
+    Welcome to this simple ES2015+ React starter basic skeletal project.
   </p>
+  <p>
+    The main purpose of this project is to explore and utilise the latest front-end technologies that is current (as of May 2017)
+  </p>
+  <p>
+    This project utilises the main technologies listed below:
+  </p>
+  <ul>
+    <li>
+      <a
+        href="https://facebook.github.io/react/docs/react-dom.html"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        react-dom
+      </a>
+       (15.5.4)
+    </li>
+    <li>
+      <a
+        href="https://github.com/reactjs/react-redux"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        react-redux
+      </a>
+       (5.0.4)
+    </li>
+    <li>
+      <a
+        href="https://github.com/reacttraining/react-router"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        react-router-dom
+      </a>
+       (4.1.1)
+    </li>
+    <li>
+      <a
+        href="https://github.com/gaearon/redux-thunk"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        redux-thunk
+      </a>
+       (2.2.0)
+    </li>
+    <li>
+      <a
+        href="https://github.com/whatwg/fetch"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        whatwg-fetch
+      </a>
+       (2.0.3)
+    </li>
+    <li>
+      <a
+        href="https://webpack.github.io/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        webpack
+      </a>
+       (2.4.1)
+    </li>
+    <li>
+      <a
+        href="https://github.com/babel/babel"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        babel
+      </a>
+       (6.24.1)
+    </li>
+    <li>
+      <a
+        href="https://github.com/eslint/eslint"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        eslint
+      </a>
+       (using airbnb eslint config)
+    </li>
+    <li>
+      <a
+        href="https://facebook.github.io/jest/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        jest
+      </a>
+       (19.0.2)
+    </li>
+    <li>
+      <a
+        href="https://nodejs.org/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        nodeJS
+      </a>
+       (7.7.1)
+    </li>
+    <li>
+      <a
+        href="https://github.com/yarnpkg/yarn"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        yarn
+      </a>
+       (0.23.4)
+    </li>
+  </ul>
 </div>
 `;

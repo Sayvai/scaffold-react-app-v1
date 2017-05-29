@@ -1,3 +1,22 @@
 .gitUserSearch {
-  color: #000;
+  position: relative;
+  margin-bottom: 1em;
+  overflow: hidden;
+  
+  input {
+    width: 100%;
+    font-size: 2em;
+  }
+
+  button {
+    position: absolute;
+    right: -200px;
+    cursor: pointer;
+    font-size: 2em;
+    transition: right .55s ease-in-out;
+  }
+
+  &:hover button, &:active button, &:focus button {
+    right: 0;
+  }
 }

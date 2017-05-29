@@ -5,7 +5,7 @@ import GitUserSearch from './GitUserSearch';
 import GitUserDetail from './GitUserDetail';
 
 const GitUsers = ({ onSubmit, userData }) => {
-  if (!userData) return <GitUserSearch onSubmitCb={onSubmit} />;
+  if (!userData) return <div className={styles.gitUsers}><GitUserSearch onSubmitCb={onSubmit} /></div>;
 
   return (
     <div className={styles.gitUsers}>

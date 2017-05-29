@@ -1,3 +1,37 @@
+$default-color: #fff;
+$shadow-color: #222;
+$link-color: #9494f5;
+$visited-color: #ff93ff;
+$item-color: #292929;
+$item-border: #484848;
+
 .gitUserDetail {
-  color: #000;
+  background-color: $item-color;
+  color: $default-color;
+  border: 1px dashed $item-border;
+  display: flex;
+  flex-direction: row;
+
+  [id=avatar] {
+    margin-right: 1em;
+
+    img {
+      display: block;
+      width: 100px;
+    }
+  }
+
+  tr td {
+    &:nth-child(2) {
+      padding-left: 1em;
+    }
+
+    a {
+      color: $link-color;
+
+      &:visited {
+        color: $visited-color;
+      }
+    }
+  }
 }
